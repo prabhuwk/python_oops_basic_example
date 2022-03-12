@@ -8,8 +8,11 @@ employees = [
     Tester("Dane", "Joey", 2500),
 ]
 
-account_report = AccountReport(employees)
-account_report.print_account_report()
+reports = [
+    AccountReport(employees),
+    StaffReport(employees)
+]
 
-staff_report = StaffReport(employees)
-staff_report.print_staff_report()
+for r in reports:
+    r.print_report()
+    print()
