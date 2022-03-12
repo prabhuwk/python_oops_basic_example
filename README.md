@@ -1,1 +1,3 @@
-# python_oops_basic_example
+# python oops basic example
+
+This example provides implementation of python code using oops concepts.
