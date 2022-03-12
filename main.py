@@ -1,4 +1,5 @@
 from employee import Manager, Developer, Tester
+from report import AccountReport, StaffReport
 
 employees = [
     Manager("Jack", "Brown", 4000),
@@ -7,18 +8,8 @@ employees = [
     Tester("Dane", "Joey", 2500),
 ]
 
-def print_account_report():
-    print("Account Report")
-    print("==============")
-    for e in employees:
-        print(f"{e.get_full_name()}, ${e.salary}")
+account_report = AccountReport(employees)
+account_report.print_account_report()
 
-def print_staff_report():
-    print("Staff Report")
-    print("============")
-    for e in employees:
-        print(f"{e.get_full_name()}, {e.job_title}")
-
-print_account_report()
-print()
-print_staff_report()
+staff_report = StaffReport(employees)
+staff_report.print_staff_report()
