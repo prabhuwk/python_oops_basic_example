@@ -3,12 +3,21 @@ class Employee:
         self.name = name
         self.salary = salary
 
+class Manager(Employee):
+    job_title = "Manager"
+
+class Developer(Employee):
+    job_title = "Developer"
+
+class Tester(Employee):
+    job_title = "Tester"
+
 employees = [
-    Employee("Jack", 4000),
-    Employee("Jill", 3000),
-    Employee("Chris", 3000),
-    Employee("Dane", 2500),
+    Manager("Jack", 4000),
+    Developer("Jill", 3000),
+    Developer("Chris", 3000),
+    Tester("Dane", 2500),
 ]
 
 for e in employees:
-    print(f"{e.name}, ${e.salary}")
+    print(f"{e.name}, ${e.salary}, {e.job_title}")
