@@ -1,12 +1,11 @@
 from employee import Manager, Developer, Tester
 from report import AccountReport, StaffReport, ScheduleReport
-import datetime
-
+from shift import MorningShift, AfternoonShift
 employees = [
-    Manager("Jack", "Brown", 4000, datetime.time(8, 00), datetime.time(14, 00)),
-    Developer("Jill", "Jones", 3000, datetime.time(12, 00), datetime.time(20, 00)),
-    Developer("Chris", "Dawn", 3000, datetime.time(8, 00), datetime.time(14, 00)),
-    Tester("Dane", "Joey", 2500, datetime.time(12, 00), datetime.time(20, 00)),
+    Manager("Jack", "Brown", 4000, MorningShift()),
+    Developer("Jill", "Jones", 3000, AfternoonShift()),
+    Developer("Chris", "Dawn", 3000, MorningShift()),
+    Tester("Dane", "Joey", 2500, AfternoonShift()),
 ]
 
 reports = [
