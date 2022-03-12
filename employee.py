@@ -1,7 +1,4 @@
-from time import time
-
 from shift import Shift
-
 
 class Employee:
     def __init__(self, first_name: str, last_name: str, salary: int, shift):
