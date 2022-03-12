@@ -11,13 +11,13 @@ def print_account_report():
     print("Account Report")
     print("==============")
     for e in employees:
-        print(f"{e.first_name} {e.last_name}, ${e.salary}")
+        print(f"{e.get_full_name()}, ${e.salary}")
 
 def print_staff_report():
     print("Staff Report")
     print("============")
     for e in employees:
-        print(f"{e.first_name} {e.last_name}, {e.job_title}")
+        print(f"{e.get_full_name()}, {e.job_title}")
 
 print_account_report()
 print()
