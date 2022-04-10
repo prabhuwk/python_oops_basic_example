@@ -1,6 +1,12 @@
-class Report:
+from abc import ABC, abstractmethod
+
+class Report(ABC):
     def __init__(self, emp_list):
         self._emp_list = emp_list
+
+    @abstractmethod
+    def print_report(self):
+        pass
 
 class AccountReport(Report):
     def print_report(self):
